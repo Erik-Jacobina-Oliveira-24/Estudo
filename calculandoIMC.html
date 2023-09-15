@@ -1,0 +1,63 @@
+<meta charset = "UTF-8">
+
+<title>Calculando IMC</title>
+
+<h2>CALCULO DOS IMC's</h2>
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+        document.write("______________________________________________________");
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura){
+        var imcCalc = peso / (altura * altura);
+        var imc = imcCalc.toFixed(2);
+        return imc;
+    }
+
+    function somaImc(peso, altura){
+        return imcCalc = peso / (altura * altura);
+    }
+    
+    var nome1 = prompt("Qual é o seu nome? ");
+    var peso1 = prompt(nome1 + ", qual é seu peso?"); 
+    var altura1 = prompt(nome1 + ", qual é a sua altura?");
+    var imc =  calculaImc(peso1, altura1)
+    //var nome2 = prompt("Qual é o seu nome?");
+    //var peso2 = prompt(nome2 + ", qual é o seu peso? ");
+    //var altura2 = prompt(nome2 + ", qual é a sua altura?");
+    //var somaImc = somaImc(peso1, altura1) + somaImc(peso2, altura2);
+    //var totalImc = somaImc.toFixed(2);
+    
+    mostra(nome1 + " o seu IMC é: " + imc);
+    //mostra(nome2 + " o seu IMC é:" + calculaImc(peso2, altura2));
+    //mostra("A soma dos imc's é: " + totalImc);
+
+    if(imc < 18.5){
+
+        mostra("Você está abaixo do recomendado");
+
+    }
+
+    if(imc > 35){
+        
+        mostra("Você está acima do recomendado");
+
+    }
+
+    if(imc >= 18.5){
+        if(imc <= 35){
+
+            mostra("O seu IMC está excelente!!")
+
+        }
+    }
+</script>

@@ -1,0 +1,50 @@
+<meta charset = "UTF-8">
+
+<title>Futebol</title>
+
+<h2>Quantos pontos o seu time está no campeonato?</h2>
+
+<script>
+    function pulaLinha(){
+
+        document.write("<br><br>");
+
+    }
+
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+        
+    }
+
+    var time = prompt("Qual é o time? ");
+
+    var pontoPassado = parseInt(prompt("Quantos pontos o seu time fez ano passado? "))
+
+    var vitorias = parseInt(prompt("Entre com o número de vitorias: "));
+    
+    var empates = parseInt(prompt("Entre com o numero de empates: "));
+
+    var pontos = (vitorias * 3) + empates; 
+
+    mostra("O " + time + " tem: " + pontos + " pontos");
+
+    if(pontos > pontoPassado){
+        
+        mostra("O seu time esta melhor que o ano passado");
+    
+    }
+
+    if(pontos < pontoPassado){
+        mostra("O seu time está pior que o ano passado");
+    
+    }
+    
+    if(pontos == pontoPassado){
+        mostra("O seu time está igual ao ano passado");
+
+    }
+
+    mostra("FIM DO PROGRAMA!!!")
+</script>
