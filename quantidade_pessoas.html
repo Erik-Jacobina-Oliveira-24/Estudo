@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<title>Idade Média</title>
+
+<script>
+    
+    function pulaLinha(){
+
+        document.write("<br><br>");
+
+    }
+
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    var empresa = parseInt(prompt("Digite a quantidade de pessoas a empresa possui: "));
+
+    var contador = 1;
+    var pessoa = 1;
+    var pessoas = 0;
+
+    while(contador <= empresa){
+
+        var idade = parseInt(prompt("Digite a idade da pessoa " + pessoa));
+        pessoas = pessoas + idade;
+        pessoa++;
+        contador++;
+    }
+
+    var idadeMedia = pessoas / empresa;
+
+    mostra("A idade média das pessoas que estão na empresa é " + idadeMedia);
+    mostra("FIM")
+   
+</script>
